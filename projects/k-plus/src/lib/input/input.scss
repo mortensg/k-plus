@@ -1,0 +1,26 @@
+:host {
+  display: inline-flex;
+  width: 100%;
+}
+
+.kplus-input {
+  width: 100%;
+  min-height: 2.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--kplus-border, #cbd5e1);
+  background: var(--kplus-surface, #fff);
+  color: var(--kplus-text, #0f172a);
+  font: inherit;
+  outline: none;
+}
+
+.kplus-input:focus {
+  border-color: var(--kplus-focus, #2563eb);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--kplus-focus, #2563eb) 25%, transparent);
+}
+
+:host([data-disabled]) .kplus-input {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

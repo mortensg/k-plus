@@ -21,6 +21,26 @@
                 "defaultValue": "{\n  args: { variant: 'danger' },\n}"
             },
             {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/k-plus/src/lib/input/input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{}"
+            },
+            {
+                "name": "Disabled",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/k-plus/src/lib/input/input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: { disabled: true },\n}"
+            },
+            {
                 "name": "Large",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -119,6 +139,26 @@
                 "deprecationMessage": "",
                 "type": "Meta<Button>",
                 "defaultValue": "{\n  title: 'K-Plus/Button',\n  component: Button,\n  args: {\n    variant: 'primary',\n    size: 'md',\n    disabled: false,\n    loading: false,\n    type: 'button',\n  },\n  render: (args) => ({\n    props: args,\n    template: `<kplus-button\n      [variant]=\"variant\"\n      [size]=\"size\"\n      [disabled]=\"disabled\"\n      [loading]=\"loading\"\n      [type]=\"type\"\n    >Button</kplus-button>`,\n  }),\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/k-plus/src/lib/input/input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<KPlusInput>",
+                "defaultValue": "{\n  title: 'K-Plus/Input',\n  component: KPlusInput,\n  decorators: [\n    (story) => ({\n      ...story(),\n      moduleMetadata: {\n        imports: [FormsModule, ReactiveFormsModule],\n      },\n    }),\n  ],\n  args: {\n    type: 'text',\n    placeholder: 'Type here…',\n    disabled: false,\n    readonly: false,\n    required: false,\n  },\n  render: (args) => ({\n    props: {\n      ...args,\n      control: new FormControl(''),\n    },\n    template: `\n      <div style=\"max-width: 320px; display: grid; gap: 8px;\">\n        <label [for]=\"id\" style=\"font: 500 12px/1.2 system-ui; color: #334155;\">Label</label>\n        <kplus-input\n          [id]=\"id\"\n          [type]=\"type\"\n          [placeholder]=\"placeholder\"\n          [disabled]=\"disabled\"\n          [readonly]=\"readonly\"\n          [required]=\"required\"\n          [formControl]=\"control\"\n        />\n        <div style=\"font: 12px/1.2 system-ui; color: #64748b;\">Value: {{ control.value }}</div>\n      </div>\n    `,\n  }),\n}"
+            },
+            {
+                "name": "Password",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/k-plus/src/lib/input/input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: { type: 'password', placeholder: '••••••••' },\n}"
             },
             {
                 "name": "preview",
@@ -226,6 +266,17 @@
                 "deprecationMessage": "",
                 "description": "",
                 "kind": 184
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<KPlusInput>",
+                "file": "projects/k-plus/src/lib/input/input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 184
             }
         ],
         "enumerations": [],
@@ -280,6 +331,48 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\n  args: { variant: 'secondary' },\n}"
+                }
+            ],
+            "projects/k-plus/src/lib/input/input.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/k-plus/src/lib/input/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{}"
+                },
+                {
+                    "name": "Disabled",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/k-plus/src/lib/input/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: { disabled: true },\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/k-plus/src/lib/input/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<KPlusInput>",
+                    "defaultValue": "{\n  title: 'K-Plus/Input',\n  component: KPlusInput,\n  decorators: [\n    (story) => ({\n      ...story(),\n      moduleMetadata: {\n        imports: [FormsModule, ReactiveFormsModule],\n      },\n    }),\n  ],\n  args: {\n    type: 'text',\n    placeholder: 'Type here…',\n    disabled: false,\n    readonly: false,\n    required: false,\n  },\n  render: (args) => ({\n    props: {\n      ...args,\n      control: new FormControl(''),\n    },\n    template: `\n      <div style=\"max-width: 320px; display: grid; gap: 8px;\">\n        <label [for]=\"id\" style=\"font: 500 12px/1.2 system-ui; color: #334155;\">Label</label>\n        <kplus-input\n          [id]=\"id\"\n          [type]=\"type\"\n          [placeholder]=\"placeholder\"\n          [disabled]=\"disabled\"\n          [readonly]=\"readonly\"\n          [required]=\"required\"\n          [formControl]=\"control\"\n        />\n        <div style=\"font: 12px/1.2 system-ui; color: #64748b;\">Value: {{ control.value }}</div>\n      </div>\n    `,\n  }),\n}"
+                },
+                {
+                    "name": "Password",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/k-plus/src/lib/input/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: { type: 'password', placeholder: '••••••••' },\n}"
                 }
             ],
             "projects/k-plus/src/stories/button.stories.ts": [
@@ -465,6 +558,19 @@
                     "description": "",
                     "kind": 184
                 }
+            ],
+            "projects/k-plus/src/lib/input/input.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<KPlusInput>",
+                    "file": "projects/k-plus/src/lib/input/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
             ]
         }
     },
@@ -539,6 +645,56 @@
             },
             {
                 "filePath": "projects/k-plus/src/lib/button/button.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/k-plus/src/lib/input/input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/k-plus/src/lib/input/input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Disabled",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/k-plus/src/lib/input/input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/k-plus/src/lib/input/input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Password",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/k-plus/src/lib/input/input.stories.ts",
                 "type": "type alias",
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",
