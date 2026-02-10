@@ -1,5 +1,11 @@
 # @cfo/k-plus
 
+## 0.2.0
+
+### Minor Changes
+
+- 58671e4: Add new standalone `kplus-input` component with ControlValueAccessor support, a11y-friendly attributes, and Storybook stories.
+
 ## 0.1.1
 
 ### Patch Changes
