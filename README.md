@@ -4,13 +4,15 @@ K-Plus is an Angular 20.x component library.
 
 Design goal: *Kirby-inspired ergonomics and visual feel* without copying Kirby assets/styles — with more flexible, composable APIs.
 
+## Documentation
+
+- Docs website (Storybook): https://mortensg.github.io/k-plus/
+
+![Deploy docs](https://github.com/mortensg/k-plus/actions/workflows/pages.yml/badge.svg)
+
 ## Packages
 
 - `@cfo/k-plus` (Angular library) — source in `projects/k-plus`
-
-## Documentation
-
-Docs are published as Storybook on GitHub Pages (after the first deploy completes).
 
 ## Development
 
