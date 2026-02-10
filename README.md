@@ -8,6 +8,10 @@ Design goal: *Kirby-inspired ergonomics and visual feel* without copying Kirby a
 
 - `@cfo/k-plus` (Angular library) — source in `projects/k-plus`
 
+## Documentation
+
+Docs are published as Storybook on GitHub Pages (after the first deploy completes).
+
 ## Development
 
 ```bash
@@ -16,8 +20,11 @@ npm install
 # build the library
 npm run build:lib
 
-# run Storybook
+# run Storybook locally
 npm run storybook
+
+# build the static docs site
+npm run build-storybook
 ```
 
 ## Publishing (npm)
