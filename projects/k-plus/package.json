@@ -1,5 +1,5 @@
 {
-  "name": "@cfo/k-plus",
+  "name": "@mortensg/k-plus",
   "version": "0.1.0",
   "peerDependencies": {
     "@angular/common": "^20.3.0",
