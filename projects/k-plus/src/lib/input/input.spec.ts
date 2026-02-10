@@ -30,6 +30,8 @@ describe('KPlusInput', () => {
 
     const fixture: ComponentFixture<Host> = TestBed.createComponent(Host);
     fixture.detectChanges();
+    await fixture.whenStable();
+    fixture.detectChanges();
 
     const input: HTMLInputElement = fixture.nativeElement.querySelector('input');
     expect(input.value).toBe('hello');
@@ -37,6 +39,7 @@ describe('KPlusInput', () => {
     input.value = 'changed';
     input.dispatchEvent(new Event('input'));
     fixture.detectChanges();
+    await fixture.whenStable();
 
     expect(fixture.componentInstance.value).toBe('changed');
   });
