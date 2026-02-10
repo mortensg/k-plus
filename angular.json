@@ -30,7 +30,11 @@
         "test": {
           "builder": "@angular/build:karma",
           "options": {
-            "tsConfig": "projects/k-plus/tsconfig.spec.json"
+            "tsConfig": "projects/k-plus/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
           }
         },
         "storybook": {
