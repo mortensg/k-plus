@@ -1,0 +1,6 @@
+<button class="kplus-button" [attr.type]="type" [disabled]="disabled || loading">
+  <span class="kplus-button__content"><ng-content /></span>
+  @if (loading) {
+    <span class="kplus-button__spinner" aria-hidden="true"></span>
+  }
+</button>
