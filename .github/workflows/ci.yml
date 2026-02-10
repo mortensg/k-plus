@@ -24,7 +24,8 @@ jobs:
         run: npm run ng -- lint
 
       - name: Test
-        run: npm test -- --watch=false
+        # CI runners do not provide an X server; run Karma in headless mode.
+        run: npm test -- --watch=false --browsers=ChromeHeadless
 
       - name: Build library
         run: npm run build:lib
